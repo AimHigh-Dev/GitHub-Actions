@@ -1,4 +1,3 @@
-
 name: CI
 
 on:
@@ -11,21 +10,18 @@ on:
 
 jobs:
 
-  Stage1:
+  Build:
   
     runs-on: ubuntu-latest
 
-     steps:
+    steps:
+ 
       - uses: actions/checkout@v3
-      - name: Build
+      - name: Stage1
         run: echo Hello, world!
    
-   Stage2:
+  Test:
        
-       steps:
+    steps:
       - uses: actions/checkout@v3
-      - name: Test
- 
-         
-    
-    
+      - name: Stage2
