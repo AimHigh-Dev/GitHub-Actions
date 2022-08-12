@@ -1,0 +1,31 @@
+
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+
+  Stage1:
+  
+    runs-on: ubuntu-latest
+
+     steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: echo Hello, world!
+   
+   Stage2:
+       
+       steps:
+      - uses: actions/checkout@v3
+      - name: Test
+ 
+         
+    
+    
